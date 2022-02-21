@@ -1,5 +1,5 @@
 <div align="center">
-  <img alt="Logo" src="https://raw.githubusercontent.com/AlexanderKhudoev/v1/main/src/images/logo.png" width="100" />
+  <img alt="Logo" src="https://raw.githubusercontent.com/AlexanderKhudoev/v1/master/src/images/logo.png" width="100" />
 </div>
 <h1 align="center">
   khudoev.dev - v1
@@ -8,7 +8,7 @@
   The first iteration of <a href="https://khudoev.dev" target="_blank">khudoev.dev</a> built with <a href="https://www.gatsbyjs.org/" target="_blank">Gatsby</a>
 </p>
 
-![demo](https://raw.githubusercontent.com/AlexanderKhudoev/v1/main/src/images/demo.png)
+![demo](https://raw.githubusercontent.com/AlexanderKhudoev/v1/master/src/images/demo.png)
 
 ## 🚨 Forking this repo (please read!)
 
