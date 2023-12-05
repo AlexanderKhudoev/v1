@@ -22,7 +22,7 @@ to-heading: 6
 
 Housing stock management is not an easy task for managing companies in the housing
 and communal services sector.
-Therefore, we (me and colleagues from Fusionsoft) my have developed the **Urban Engineering System** that allows you to calculate services, generate reports, print invoices and more.
+Therefore, we (me and colleagues from Fusionsoft) developed the **Urban Engineering System** that allows you to calculate services, generate reports, print invoices and more.
 
 Tech-stack: Oracle 11g, Laravel 8, React + Redux Toolkit
 
