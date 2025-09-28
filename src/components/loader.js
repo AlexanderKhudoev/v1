@@ -20,7 +20,7 @@ const StyledLoader = styled.div`
     width: max-content;
     max-width: 100px;
     transition: var(--transition);
-    opacity: ${props => (props.isMounted ? 1 : 0)};
+    opacity: ${(props) => (props.isMounted ? 1 : 0)};
     svg {
       display: block;
       width: 100%;
