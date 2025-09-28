@@ -1,5 +1,4 @@
 import React, { useState, useEffect, useRef } from 'react';
-import { Helmet } from 'react-helmet';
 import { Link } from 'gatsby';
 import styled from 'styled-components';
 import { navLinks } from '@config';
@@ -74,7 +73,7 @@ const StyledHamburgerButton = styled.button`
       top: ${props => (props.menuOpen ? `0` : `-10px`)};
       opacity: ${props => (props.menuOpen ? 0 : 1)};
       transition: ${({ menuOpen }) =>
-    menuOpen ? 'var(--ham-before-active)' : 'var(--ham-before)'};
+        menuOpen ? 'var(--ham-before-active)' : 'var(--ham-before)'};
     }
     &:after {
       width: ${props => (props.menuOpen ? `100%` : `80%`)};
@@ -194,7 +193,6 @@ const Menu = () => {
         setMenuOpen(false);
         break;
       }
-
       case KEY_CODES.TAB: {
         if (menuFocusables && menuFocusables.length === 1) {
           e.preventDefault();
@@ -207,7 +205,6 @@ const Menu = () => {
         }
         break;
       }
-
       default: {
         break;
       }
@@ -223,7 +220,6 @@ const Menu = () => {
   useEffect(() => {
     document.addEventListener('keydown', onKeyDown);
     window.addEventListener('resize', onResize);
-
     setFocusables();
 
     return () => {
@@ -232,15 +228,23 @@ const Menu = () => {
     };
   }, []);
 
+  // Заменяем Helmet: управляем классом body напрямую
+  useEffect(() => {
+    const cls = 'blur';
+    if (typeof document !== 'undefined') {
+      if (menuOpen) document.body.classList.add(cls);
+      else document.body.classList.remove(cls);
+    }
+    return () => {
+      if (typeof document !== 'undefined') document.body.classList.remove(cls);
+    };
+  }, [menuOpen]);
+
   const wrapperRef = useRef();
   useOnClickOutside(wrapperRef, () => setMenuOpen(false));
 
   return (
     <StyledMenu>
-      <Helmet>
-        <body className={menuOpen ? 'blur' : ''} />
-      </Helmet>
-
       <div ref={wrapperRef}>
         <StyledHamburgerButton
           onClick={toggleMenu}

@@ -2,7 +2,6 @@ import React from 'react';
 import { Link, graphql } from 'gatsby';
 import kebabCase from 'lodash/kebabCase';
 import PropTypes from 'prop-types';
-import { Helmet } from 'react-helmet';
 import styled from 'styled-components';
 import { Layout } from '@components';
 
@@ -51,8 +50,6 @@ const TagTemplate = ({ pageContext, data, location }) => {
 
   return (
     <Layout location={location}>
-      <Helmet title={`Tagged: #${tag}`} />
-
       <StyledTagsContainer>
         <span className="breadcrumb">
           <span className="arrow">&larr;</span>
@@ -121,6 +118,16 @@ TagTemplate.propTypes = {
     }),
   }),
   location: PropTypes.object,
+};
+
+export const Head = ({ pageContext }) => {
+  const { tag } = pageContext;
+  return (
+    <>
+      <title>Tagged: #{tag}</title>
+      <meta name="description" content={`Posts tagged with #${tag}`} />
+    </>
+  );
 };
 
 export const pageQuery = graphql`

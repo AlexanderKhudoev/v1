@@ -3,7 +3,7 @@ title: Urban Engineering System - Oracle, Payara, Laravel - non-blocking API
 description: Management companies system in housing and communal services sector
 date: '2022-02-14'
 draft: false
-slug: '/blog/urban-engineering-system'
+slug: '/blog/urban-engineering-system/'
 tags:
   - Laravel
   - React
@@ -56,7 +56,7 @@ which will interact with Payara API, and the frontend on `React + Redux Toolkit`
 
 The initial data source is Oracle DB: all system data is stored here.
 
-Using Fusion-API (Payara API), which was developed before I joined [Fusionsoft](https://www.fusionsoft.ru/en/) - the company where I currently work - Oracle data is traced using Payara, and then my Laravel-API layer is connected to Payara API:
+Using Fusion-API (Payara API), Oracle data is traced using Payara, and then my Laravel-API layer is connected to Payara API:
 to ensure maximum performance, non-blocking calls and send data to the browser for front-end rendering on the React and Redux Toolkit.
 
 ### 1.2. Models

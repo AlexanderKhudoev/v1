@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import { Helmet } from 'react-helmet';
 import PropTypes from 'prop-types';
-import anime from 'animejs';
+import anime from 'animejs/lib/anime.es.js';
 import styled from 'styled-components';
 import { IconLoader } from '@components/icons';
 
@@ -78,13 +77,17 @@ const Loader = ({ finishLoading }) => {
   useEffect(() => {
     const timeout = setTimeout(() => setIsMounted(true), 10);
     animate();
-    return () => clearTimeout(timeout);
+
+    // заменяем Helmet: ставим класс body вручную
+    document.body.classList.add('hidden');
+    return () => {
+      clearTimeout(timeout);
+      document.body.classList.remove('hidden');
+    };
   }, []);
 
   return (
     <StyledLoader className="loader" isMounted={isMounted}>
-      <Helmet bodyAttributes={{ class: `hidden` }} />
-
       <div className="logo-wrapper">
         <IconLoader />
       </div>

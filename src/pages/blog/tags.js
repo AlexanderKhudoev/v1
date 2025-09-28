@@ -2,7 +2,6 @@ import React from 'react';
 import { Link, graphql } from 'gatsby';
 import kebabCase from 'lodash/kebabCase';
 import PropTypes from 'prop-types';
-import { Helmet } from 'react-helmet';
 import styled from 'styled-components';
 import { Layout } from '@components';
 
@@ -38,8 +37,6 @@ const TagsPage = ({
   location,
 }) => (
   <Layout location={location}>
-    <Helmet title="Tags" />
-
     <StyledTagsContainer>
       <span className="breadcrumb">
         <span className="arrow">&larr;</span>
@@ -70,16 +67,18 @@ TagsPage.propTypes = {
         }).isRequired,
       ),
     }),
-    site: PropTypes.shape({
-      siteMetadata: PropTypes.shape({
-        title: PropTypes.string.isRequired,
-      }),
-    }),
   }),
   location: PropTypes.object,
 };
 
 export default TagsPage;
+
+export const Head = () => (
+  <>
+    <title>Tags</title>
+    <meta name="description" content="Browse all tags used across the blog posts" />
+  </>
+);
 
 export const pageQuery = graphql`
   query {

@@ -47,7 +47,7 @@ const StyledCredit = styled.div`
   line-height: 1;
 
   a {
-    padding: 10px;
+    padding: 4px 6px;
   }
 
   .github-stats {
@@ -106,8 +106,8 @@ const Footer = () => {
 
       <StyledCredit tabindex="-1">
         <div>
-          <a href="https://github.com/bchiang7">Designed</a>&amp; Built by
-          <a href="https://github.com/AlexanderKhudoev">Alexander Khudoev</a>
+         Theme awesome Gatsby theme was designed by<a href="https://github.com/bchiang7/v4">bchiang7</a>in 2018<br/> Built and Upgraded by
+          <a href="https://github.com/AlexanderKhudoev">Alexander Khudoev</a>in 2025
         </div>
 
         {githubInfo.stars && githubInfo.forks && (

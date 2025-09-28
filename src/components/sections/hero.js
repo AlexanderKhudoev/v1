@@ -64,21 +64,7 @@ const Hero = () => {
   const four = (
     <>
       <p>
-        I’m a Full Stack Web Developer specializing in building highload web apps (Backend, API,
-        Frontend) and software architect.
-      </p>
-      <p>
-        Having a master's degree in computer science, I am involved in the researches related to the
-        construction of mathematical models for predicting the quality of production based on
-        Genetic Algorithms and Neural Networks.
-      </p>
-
-      <p>
-        Currently, I’m focused on building accessible, human-centered web products at{' '}
-        <a href="https://www.fusionsoft.ru/en/" target="_blank" rel="noreferrer">
-          Fusionsoft
-        </a>
-        .
+        Full Stack Developer with 10+ years of experience in building high-performance web applications and APIs. Strong expertise in <b>React, Go, Java, PHP, Oracle DB, PostgresQL</b>. Proven track record in leading cross-functional teams, designing scalable architectures, and delivering business-critical solutions. Passionate about clean code, system design, and mentoring.
       </p>
     </>
   );

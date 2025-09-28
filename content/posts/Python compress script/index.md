@@ -3,7 +3,7 @@ title: Python script to archive large pdf into rar with 20x compression rate
 description: python pdf to rar compress
 date: '2022-02-22'
 draft: false
-slug: '/blog/python-compress-pdf-to-rar'
+slug: '/blog/python-compress-pdf-to-rar/'
 tags:
   - Python
   - Linux

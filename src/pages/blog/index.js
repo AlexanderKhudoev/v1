@@ -2,7 +2,6 @@ import React from 'react';
 import { graphql, Link } from 'gatsby';
 import kebabCase from 'lodash/kebabCase';
 import PropTypes from 'prop-types';
-import { Helmet } from 'react-helmet';
 import styled from 'styled-components';
 import { Layout } from '@components';
 
@@ -15,8 +14,8 @@ const StyledMainContainer = styled.main`
       &:hover,
       &:focus {
         cursor: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='40' height='48' viewport='0 0 100 100' style='fill:black;font-size:24px;'><text y='50%'>⚡</text></svg>")
-            20 0,
-          auto;
+        20 0,
+        auto;
       }
     }
   }
@@ -146,8 +145,6 @@ const BlogPage = ({ location, data }) => {
 
   return (
     <Layout location={location}>
-      <Helmet title="Blog" />
-
       <StyledMainContainer>
         <header>
           <h1 className="big-heading">Blog</h1>
@@ -202,6 +199,13 @@ BlogPage.propTypes = {
 };
 
 export default BlogPage;
+
+export const Head = () => (
+  <>
+    <title>Blog</title>
+    <meta name="description" content="A collection of software development memories" />
+  </>
+);
 
 export const pageQuery = graphql`
   {
