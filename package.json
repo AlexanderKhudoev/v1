@@ -14,6 +14,7 @@
     "serve": "gatsby serve",
     "clean": "gatsby clean",
     "lint": "eslint --ext .js,.jsx src",
+    "lint:fix": "eslint --ext .js,.jsx src --fix",
     "format": "prettier --write \"src/**/*.{js,jsx,json,md}\""
   },
   "dependencies": {
@@ -51,8 +52,10 @@
   "devDependencies": {
     "babel-plugin-styled-components": "^2.1.4",
     "eslint": "^9.11.0",
+    "eslint-config-prettier": "^10.1.8",
+    "eslint-plugin-prettier": "^5.5.4",
     "eslint-plugin-react": "^7.37.0",
-    "prettier": "^3.3.3"
+    "prettier": "^3.6.2"
   },
   "engines": {
     "node": "22.x"

@@ -44,7 +44,6 @@ const StyledHeroSection = styled.section`
     margin-top: 50px;
   }
 `;
-
 const Hero = () => {
   const [isMounted, setIsMounted] = useState(false);
   const prefersReducedMotion = usePrefersReducedMotion();
@@ -63,9 +62,19 @@ const Hero = () => {
   const three = <h3 className="big-heading">Full Stack Web Developer</h3>;
   const four = (
     <>
-      <p>
-        Full Stack Developer with 10+ years of experience in building high-performance web applications and APIs. Strong expertise in <b>React, Go, Java, PHP, Oracle DB, PostgresQL</b>. Proven track record in leading cross-functional teams, designing scalable architectures, and delivering business-critical solutions. Passionate about clean code, system design, and mentoring.
-      </p>
+      <ul>
+        <li>
+          Full Stack Developer with 10+ years of experience in building high-performance web applications and APIs.
+        </li>
+        <li>
+          Strong expertise in <b>React, Go, Java, PHP, Oracle DB, PostgreSQL</b>.
+        </li>
+        <li>
+          Proven track record in leading cross-functional teams, designing scalable architectures, and delivering
+          business-critical solutions.
+        </li>
+        <li>Passionate about clean code, system design, and mentoring.</li>
+      </ul>
     </>
   );
   const five = (

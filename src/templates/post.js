@@ -18,9 +18,22 @@ const StyledPostHeader = styled.header`
 `;
 const StyledPostContent = styled.div`
   margin-bottom: 100px;
-  h1, h2, h3, h4, h5, h6 { margin: 2em 0 1em; }
-  p { margin: 1em 0; line-height: 1.5; color: var(--light-slate); }
-  a { ${({ theme }) => theme.mixins.inlineLink}; }
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    margin: 2em 0 1em;
+  }
+  p {
+    margin: 1em 0;
+    line-height: 1.5;
+    color: var(--light-slate);
+  }
+  a {
+    ${({ theme }) => theme.mixins.inlineLink};
+  }
   code {
     background-color: var(--lightest-navy);
     color: var(--lightest-slate);
@@ -28,7 +41,10 @@ const StyledPostContent = styled.div`
     font-size: var(--fz-sm);
     padding: 0.2em 0.4em;
   }
-  pre code { background-color: transparent; padding: 0; }
+  pre code {
+    background-color: transparent;
+    padding: 0;
+  }
 `;
 
 const PostTemplate = ({ data, location }) => {
@@ -41,7 +57,11 @@ const PostTemplate = ({ data, location }) => {
         <main style={{ padding: '4rem 0' }}>
           <h1>Post not found</h1>
           <p>This post is missing or has invalid frontmatter.</p>
-          <p><Link to="/blog" className="inline-link">← Back to blog</Link></p>
+          <p>
+            <Link to="/blog" className="inline-link">
+              ← Back to blog
+            </Link>
+          </p>
         </main>
       </Layout>
     );
